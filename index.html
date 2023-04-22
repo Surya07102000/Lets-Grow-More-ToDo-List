@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="mystyle.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar"><br><br>
+  <a class="active" href="#home">My ToDo List</a>
+  <a href="#all tasks">All Tasks</a>
+  <a href="#important tasks">Important Tasks</a>
+  <a href="#completed task">Completed Tasks</a>
+  <a href="#Uncompleted task">Uncompleted Tasks</a>
+</div>
+<center>
+<div class="content">
+    <h1><span class="heading">TODO</span> List</h1>
+    <div class="input_div">
+        <input type="text" class="input" placeholder="What do you want to do...">
+        <button class="addButton"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class="container">
+       <!--  <div class="item">
+            <input type="text" class="item_input"  disabled>
+            <button class = "editButton">Edit</button>
+            <button class="removeButton">Remove</button>
+        </div> -->
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script></div>
+
+</body>
+</html>
